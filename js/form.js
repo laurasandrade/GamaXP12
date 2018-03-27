@@ -12,12 +12,13 @@ function setup(){
   messagingSenderId: "278448539127"
 };
 
-  usuarioNome = document.querySelector("#nome");
-  usuarioEmpresa = document.querySelector("#empresa");
-  usuarioEmail = document.querySelector("#email");
+usuarioNome = document.querySelector("#nome");
+usuarioEmpresa = document.querySelector("#empresa");
+usuarioEmail = document.querySelector("#email");
 
-  firebase.initializeApp(config);
-  database = firebase.database();
+firebase.initializeApp(config);
+database = firebase.database();
+
 };
 
 function submitX(){
@@ -33,19 +34,29 @@ function submitX(){
   var ref = database.ref('formulario');
   ref.push(envio);
 
+  alert("Mensagem Enviada com Sucesso!"); 
 }
 
-function msg(){
+function validar() {
+  var nome = form1.nome.value;
+  var empresa = form1.empresa.value;
+  var email = form1.email.value;
 
-    $("#form-contato").keyup(function(){
+  if (nome.length < 5) {
+    alert('Digite seu nome completo');
+    form1.nome.focus();
+    return false;
+  }
 
-    if($("#form-contato").val()==''){
-      $("#enviaform").attr("disabled", true);
-      alert("Mensagem Enviada com Sucesso!"); 
-    }else{
-      $("#enviaform").attr("disabled", false);
-    }
-  });
+  if (empresa == "") {
+    alert('Preencha o campo com sua empresa');
+    form1.empresa.focus();
+    return false;
+  }
+
+  if (email == "") {
+    alert('Preencha o campo com seu email');
+    form1.email.focus();
+    return false;
+  }
 }
-
-

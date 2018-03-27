@@ -50,7 +50,7 @@
 	<section id="form-contato">
 		<div class="container">
 			<h1>Entre em contato</h1>
-			<form id="first-form" accept-charset="utf-8" onsubmit="submitX(event)">
+			<form name="form1" id="first-form" accept-charset="utf-8" onsubmit="submitX(event)">
 				<label for="nome"></label>
 				<input id="nome" type="text" placeholder="Nome" name="usuario_nome" title="Preencha o campo apenas com letras" required>
 
@@ -60,7 +60,7 @@
 				<label for="email"></label>
 				<input id="email" type="email"  placeholder="Email" name="usuario_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
 
-				<input type="submit" value="Enviar" id="enviaform" onclick="msg()">
+				<input type="submit" value="Enviar" id="enviaform" onclick="return validar()">
 			</form>
 		</div>
 	</section>
