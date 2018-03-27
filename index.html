@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment #1! - Landing Page</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	
+</head>
+<body onload="setup()">
+
+	<header class="top-header">
+		<div class="container">
+			<h1 class="top-header-titulo">
+				<a href="#">Laura A.</a>
+			</h1>
+
+			<nav class="top-header-nav">
+				<a class="top-header-nav-link" href="#bloco1">Bloco 1</a>
+				<a class="top-header-nav-link" href="#bloco2">Bloco 2</a>
+				<a class="top-header-nav-link" href="#bloco3">Bloco 3</a>
+				<a class="top-header-nav-link" href="#bloco4">Formulário</a>
+			</nav>
+		</div>
+
+	</header>
+
+
+	<section id="bloco1" class="bloco-1">
+		<div class="content-img-bloco1">
+			<img src="img/gama.png" class="img-responsive">
+		</div>
+		<div class="content-txt-bloco1">
+			<p>Olá!</p>
+			<p>Essa é a nossa primeira tarefa do desafio Gama!</p> 
+			<p>Me chamo Laura, atuo como front-end há um pouco mais de 10 anos, sou formada em Analise e Desenvolvimento de Sistemas e já trabalhei em grandes empresas.</p>
+		</div>
+	</section>
+	<section id="bloco2" class="bloco-2">
+		<h1>Minhas principais linguagens:</h1> 
+		<ul class="list">
+			<li><img src="img/html.png"></li>
+			<li><img src="img/css.png"></li>
+		</ul>
+	</section>
+	<section id="bloco3" class="bloco-3">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</section>
+
+	<section id="form-contato">
+		<div class="container">
+			<h1>Entre em contato</h1>
+			<form id="first-form" accept-charset="utf-8" onsubmit="submitX(event)">
+				<label for="nome"></label>
+				<input id="nome" type="text" placeholder="Nome" name="usuario_nome" title="Preencha o campo apenas com letras" required>
+
+				<label for="empresa"></label>
+				<input id="empresa" type="text" placeholder="Empresa" required>
+
+				<label for="email"></label>
+				<input id="email" type="email"  placeholder="Email" name="usuario_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+
+				<input type="submit" value="Enviar" id="enviaform" onclick=msg();>
+			</form>
+		</div>
+	</section>
+
+	<footer>
+		<p>© Copyright 2018 - Laura Andrade</p>
+	</footer>
+
+	<script src="js/form.js"></script>
+
+</body>
+</html>

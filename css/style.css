@@ -1,0 +1,163 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	margin:0;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size:17px;
+	line-height:1.6;
+}
+
+.top-header{
+	background: #000;
+}
+h1.top-header-titulo a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 1em;
+}
+.top-header .container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.top-header-nav{
+	display: flex;
+}
+
+a.top-header-nav-link{	
+	margin: 0 0 0 30px; 
+	color: #fff;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+}
+
+.top-header-nav-link a:hover{
+	color: #red;
+}
+.bloco-1{
+	padding: 20px;
+	background: #fff;
+	color: #000;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+.bloco-1 .img-responsive{
+	width: 80%;
+}
+.content-img-bloco1{
+	font-size: 3rem;
+	width: 80%;
+	height: 40%;
+	margin: 35px 0 20px 0;
+	align-self: center;
+}
+.content-txt-bloco1{
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+.bloco-2{
+	padding:20px;
+	background:#f4f4f4;
+	text-align:center;
+}
+#bloco2 > h1{
+	color: #3b3992;
+	text-align: center;
+}
+.bloco-2 .list{
+	list-style: none;
+}
+#bloco2 > ul{
+	display: flex;
+	justify-content: center;
+}
+#bloco2 > ul > li > img{
+	width: 50%;
+}
+.bloco-3{
+	padding:20px;
+	text-align:center;
+}
+.bloco-3 p{
+	text-align: justify;
+}
+#form-contato{
+	background: linear-gradient(0deg, #17262d, #d65348);
+	color: #fff;
+}
+#form-contato .container{
+	text-align: center;
+}
+#form-contato form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#form-contato div{
+	padding:20px;
+}
+#form-contato .button{
+	font-size:15px;
+	text-decoration:none;
+	color:#926239;
+	border:#926239 1px solid;
+	padding:10px 5px;
+	border-radius:10px;
+	margin-top:20px;
+}
+#form-contato input{
+	width: 470px;
+	height: 50px;
+	padding: 0px 15px 0px 15px;
+	margin: 10px;
+	background: transparent;
+	outline: none;
+	color: #bbb5af;
+	border: solid 1px #b3aca7;
+	transition: all 0.3s ease-in-out;
+	border-radius: 45px;
+}
+#form-contato #enviaform{
+	text-transform: uppercase;
+	font-size: 15px;
+	letter-spacing: 0.4px;
+	margin-top: 20px;
+	background: #c95046;
+	color: #fff;
+	border: 0;
+}
+footer{
+	background-color: #17262d;
+	color: #fff;
+	padding: 50px 0;
+	text-align: center;
+}
+
+@media (max-width: 768px){
+	.top-header .container {		
+		flex-direction: column;
+		align-items: initial;
+		text-align: center;
+	}
+
+	.top-header-nav {
+		flex-direction: column;
+	}
+	a.top-header-nav-link{
+		border: 1px solid #c5bebe;
+		margin: 0
+	}
+	#form-contato input{
+		    width: 220px;
+    height: 35px;
+	}
+}
