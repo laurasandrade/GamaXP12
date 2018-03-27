@@ -1,7 +1,6 @@
 var usuarioNome;
 var usuarioEmpresa;
 var usuarioEmail;
-var erro = validacampos;
 
 function setup(){
  var config = {
@@ -13,12 +12,12 @@ function setup(){
   messagingSenderId: "278448539127"
 };
 
-usuarioNome = document.querySelector("#nome");
-usuarioEmpresa = document.querySelector("#empresa");
-usuarioEmail = document.querySelector("#email");
+  usuarioNome = document.querySelector("#nome");
+  usuarioEmpresa = document.querySelector("#empresa");
+  usuarioEmail = document.querySelector("#email");
 
-firebase.initializeApp(config);
-database = firebase.database();
+  firebase.initializeApp(config);
+  database = firebase.database();
 };
 
 function submitX(){
@@ -33,11 +32,20 @@ function submitX(){
 
   var ref = database.ref('formulario');
   ref.push(envio);
-}
 
+}
 
 function msg(){
-  alert("Mensagem Enviada com Sucesso!"); 
-  // document.form-contato.reset();
+
+    $("#form-contato").keyup(function(){
+
+    if($("#form-contato").val()==''){
+      $("#enviaform").attr("disabled", true);
+      alert("Mensagem Enviada com Sucesso!"); 
+    }else{
+      $("#enviaform").attr("disabled", false);
+    }
+  });
 }
+
 
